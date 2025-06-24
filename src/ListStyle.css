@@ -1,0 +1,92 @@
+/* Headings */
+h2 {
+  color: #1d1f22;
+  margin-bottom: 103px;
+  font-size: 42px;
+  font-weight: 400;
+  font-family: "Raleway", sans-serif;
+}
+
+/* Product Listing Layout */
+.product-listing {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 43px;
+}
+
+/* Product Card */
+.product-card {
+  position: relative;
+  padding: 16px;
+}
+
+.image-container {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background: #f5f5f5;
+  margin-bottom: 24px;
+  overflow: visible;
+}
+
+/* Out of Stock Overlay */
+.out-of-stock {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  color: #8d8f9a;
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+  position: absolute;
+  bottom: -16px;
+  right: 16px;
+  width: 52px;
+  height: 52px;
+  background: #5ece7b;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  box-shadow: 0px 4px 35px 0px rgba(168, 172, 176, 0.19);
+}
+
+.product-card:hover .add-to-cart {
+  opacity: 1;
+}
+
+/* Product Info */
+.product-info h3 {
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-family: "Raleway", sans-serif;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+}
+
+span {
+  font-family: "Raleway", sans-serif;
+}

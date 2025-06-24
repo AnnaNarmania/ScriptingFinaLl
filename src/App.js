@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+// import "./styles.css"; // ✅ This connects your CSS file
+
+import { useState } from "react";
+import { CartProvider } from "./contexts/CartContext";
+import { CurrencyProvider } from "./contexts/CurrencyContext";
+import NavigationBar from "./NavigationBar";
+import ProductListing from "./ProductListing";
 
 function App() {
+  const [activeCategory, setActiveCategory] = useState("WOMEN");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CurrencyProvider>
+      <CartProvider>
+        <NavigationBar
+          activeCategory={activeCategory}
+          setActiveCategory={setActiveCategory}
+        />
+        <ProductListing activeCategory={activeCategory} />
+      </CartProvider>
+    </CurrencyProvider>
   );
 }
 

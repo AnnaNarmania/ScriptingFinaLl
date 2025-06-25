@@ -2,35 +2,39 @@ import { useCart } from "./contexts/CartContext";
 import { useCurrency } from "./contexts/CurrencyContext";
 import "./NavBar.css";
 
-function NavigationBar({ activeCategory, setActiveCategory }) {
+function Navigation({ activeCategory, setActiveCategory }) {
   const { cartItems } = useCart();
   const { currency, setCurrency } = useCurrency();
 
-  const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   const categories = ["WOMEN", "MEN", "KIDS"];
 
-  const getClassName = (category) => {
-    if (activeCategory === category) {
-      return "nav-link active";
-    }
-    return "nav-link";
-  };
+  let cartCount = 0;
+  for (let i = 0; i < cartItems.length; i++) {
+    cartCount += cartItems[i].quantity;
+  }
 
   return (
-    <nav className="navigation-bar">
-      <div className="nav-left">
-        {categories.map((category) => (
-          <button
-            key={category}
-            className={getClassName(category)}
-            onClick={() => setActiveCategory(category)}
-          >
-            {category}
-          </button>
-        ))}
+    <nav className="navigation">
+      <div className="categories">
+        {categories.map((category) => {
+          let className = "cat";
+          if (activeCategory === category) {
+            className += " active";
+          }
+
+          return (
+            <button
+              key={category}
+              className={className}
+              onClick={() => setActiveCategory(category)}
+            >
+              {category}
+            </button>
+          );
+        })}
       </div>
 
-      <div className="nav-center">
+      <div className="logo">
         <svg
           width="33"
           height="31"
@@ -80,17 +84,25 @@ function NavigationBar({ activeCategory, setActiveCategory }) {
         </svg>
       </div>
 
-      <div className="nav-right">
-        <select
-          value={currency}
-          onChange={(e) => setCurrency(e.target.value)}
-          aria-label="Currency"
-        >
-          <option value="USD">$ USD</option>
-          <option value="EUR">€ EUR</option>
-          <option value="JPY">¥ JPY</option>
-        </select>
-        <div className="cart-icon" role="button" aria-label="Cart">
+      <div className="cartCurr">
+        <div>
+          <select
+            value={currency}
+            onChange={(e) => setCurrency(e.target.value)}
+            className="dropdown"
+          >
+            <option className="dollar" value="USD">
+              $ USD
+            </option>
+            <option className="euro" value="EUR">
+              € EUR
+            </option>
+            <option className="jpn" value="JPY">
+              ¥ JPY
+            </option>
+          </select>
+        </div>
+        <div className="icon">
           <svg
             className="cart"
             xmlns="http://www.w3.org/2000/svg"
@@ -112,11 +124,16 @@ function NavigationBar({ activeCategory, setActiveCategory }) {
               fill="#43464E"
             />
           </svg>
-          {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
+          {(() => {
+            if (cartCount > 0) {
+              return <span className="count">{cartCount}</span>;
+            }
+            return null;
+          })()}
         </div>
       </div>
     </nav>
   );
 }
 
-export default NavigationBar;
+export default Navigation;

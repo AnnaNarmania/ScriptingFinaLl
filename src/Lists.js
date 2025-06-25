@@ -1,96 +1,99 @@
 import { useCart } from "./contexts/CartContext";
 import { useCurrency } from "./contexts/CurrencyContext";
 import "./ListStyle.css";
-import { Link } from "react-router-dom";
 
-function ProductListing({ activeCategory }) {
+const products = [
+  {
+    id: 1,
+    name: "Apollo Running Short",
+    price: 50,
+    category: "MEN",
+    inStock: true,
+  },
+  {
+    id: 2,
+    name: "Jupiter Wayfarer",
+    price: 75,
+    category: "WOMEN",
+    inStock: true,
+  },
+  {
+    id: 3,
+    name: "Saturn Sport Tee",
+    price: 45,
+    category: "KIDS",
+    inStock: false,
+  },
+
+  {
+    id: 4,
+    name: "Jupiter Wayfarer",
+    price: 75,
+    category: "WOMEN",
+    inStock: true,
+  },
+
+  {
+    id: 5,
+    name: "Jupiter Wayfarer",
+    price: 75,
+    category: "WOMEN",
+    inStock: true,
+  },
+  {
+    id: 6,
+    name: "Jupiter Wayfarer",
+    price: 75,
+    category: "WOMEN",
+    inStock: true,
+  },
+];
+
+const currencyRates = {
+  USD: 1,
+  EUR: 0.85,
+  JPY: 110,
+};
+
+const currencySymbols = {
+  USD: "$",
+  EUR: "€",
+  JPY: "¥",
+};
+
+function Products({ activeCategory }) {
   const { addToCart } = useCart();
   const { currency } = useCurrency();
 
-  const products = [
-    {
-      id: 1,
-      name: "Apollo Running Short",
-      price: 50,
-      category: "MEN",
-      inStock: true,
-    },
-    {
-      id: 2,
-      name: "Jupiter Wayfarer",
-      price: 75,
-      category: "WOMEN",
-      inStock: true,
-    },
-    {
-      id: 3,
-      name: "Saturn Sport Tee",
-      price: 45,
-      category: "KIDS",
-      inStock: false,
-    },
+  const visible = products.filter((p) => p.category === activeCategory);
 
-    {
-      id: 4,
-      name: "Jupiter Wayfarer",
-      price: 75,
-      category: "WOMEN",
-      inStock: true,
-    },
-
-    {
-      id: 5,
-      name: "Jupiter Wayfarer",
-      price: 75,
-      category: "WOMEN",
-      inStock: true,
-    },
-    {
-      id: 6,
-      name: "Jupiter Wayfarer",
-      price: 75,
-      category: "WOMEN",
-      inStock: true,
-    },
-  ];
-
-  const currencyRates = {
-    USD: 1,
-    EUR: 0.85,
-    JPY: 110,
-  };
-
-  const currencySymbols = {
-    USD: "$",
-    EUR: "€",
-    JPY: "¥",
-  };
-
-  const displayPrice = (price) => {
+  const getPrice = (price) => {
     const rate = currencyRates[currency];
     const symbol = currencySymbols[currency];
-    return symbol + (price * rate).toFixed(2);
+    return `${symbol}${(price * rate).toFixed(2)}`;
   };
 
-  const filtered = products.filter((p) => p.category === activeCategory);
-
   return (
-    <div className="product-listing">
+    <div className="products">
       <h2>{activeCategory}</h2>
-      <div className="product-grid">
-        {filtered.map((product) => {
-          const cardClasses = ["product-card"];
+      <div className="grid">
+        {visible.map((product) => {
           if (!product.inStock) {
-            cardClasses.push("disabled");
-          }
-
-          return (
-            <div key={product.id} className={cardClasses.join(" ")}>
-              <div className="image-container">
-                {!product.inStock && (
+            return (
+              <div key={product.id} className="product">
+                <div className="photo">
                   <div className="out-of-stock">OUT OF STOCK</div>
-                )}
-                {product.inStock && (
+                </div>
+                <div className="details">
+                  <h3>{product.name}</h3>
+                  <p className="price">{getPrice(product.price)}</p>
+                </div>
+              </div>
+            );
+          } else {
+            return (
+              <div key={product.id} className="product">
+                <div className="photo">
                   <button
                     className="add-to-cart"
                     onClick={() => addToCart(product)}
@@ -116,18 +119,18 @@ function ProductListing({ activeCategory }) {
                       />
                     </svg>
                   </button>
-                )}
+                </div>
+                <div className="details">
+                  <h3>{product.name}</h3>
+                  <p className="price">{getPrice(product.price)}</p>
+                </div>
               </div>
-              <div className="product-info">
-                <h3>{product.name}</h3>
-                <p className="price">{displayPrice(product.price)}</p>
-              </div>
-            </div>
-          );
+            );
+          }
         })}
       </div>
     </div>
   );
 }
 
-export default ProductListing;
+export default Products;

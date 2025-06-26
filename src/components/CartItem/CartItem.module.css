@@ -37,8 +37,14 @@
 }
 
 .label {
-  font-size: 0.85rem;
-  margin-top: 4px;
+   margin-bottom: 2px;
+     color: #1D1F22;
+text-align: flex-start;
+font-family: "Roboto Condensed";
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 18px; 
 }
 
 .quantityControl {

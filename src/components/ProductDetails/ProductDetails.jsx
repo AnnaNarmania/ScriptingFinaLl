@@ -25,6 +25,10 @@ function ProductDetails() {
       alert("Please select a size");
       return;
     }
+    if (!product.inStock) {
+      alert("This product is currently out of stock.");
+      return;
+    }
     addToCart({ ...product, selectedSize, quantity: 1 });
   };
 
@@ -33,7 +37,13 @@ function ProductDetails() {
     const symbol = currencySymbols[currency];
     return `${symbol}${(price * rate).toFixed(2)}`;
   };
+const getDescription = (description) => {
+  return description || "No description available.";
+};
 
+const isInstock = (product) => {
+  return product.inStock ? "In Stock" : "Out of Stock";
+};
   return (
     <div className={styles.productDetail}>
       <div className={styles.leftColumn}>
@@ -58,14 +68,15 @@ function ProductDetails() {
           <span style={{ fontWeight: 600 }}>{product.name.split(" ")[0]}</span>
           <br />
           {product.name.split(" ").slice(1).join(" ")}
+          <span className={styles.stock}>{isInstock(product)}</span>
         </h1>
-        <h4 className={styles.sizeLabel}>SIZE:</h4>
+        <h4 className={styles.size}>SIZE:</h4>
         <SizeSelector
           selectedSize={selectedSize}
           onSelectSize={setSelectedSize}
         />
 
-        <h4 className={styles.sizeLabel}>PRICE:</h4>
+        <h4 className={styles.pricee}>PRICE:</h4>
         <p className={styles.price}>{getPrice(product.price)}</p>
 
         <button className={styles.addButton} onClick={handleAddToCart}>
@@ -73,7 +84,7 @@ function ProductDetails() {
         </button>
 
         <p className={styles.description}>
-          Find stunning women's cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses and party dresses from all your favorite brands.
+          {getDescription(product.description)}
         </p>
       </div>
     </div>

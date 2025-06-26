@@ -8,6 +8,7 @@ export const products = [
   {
     id: 1,
     name: "Apollo Running Short",
+    description:"As fuel dwindles and time slips away, Apollo races against the void. Stranded between Earth and destiny, one final mission teeters on the edge of failure. Every second counts. Every breath matters. Will humanity’s reach exceed its grasp?",
     price: 50,
     category: "MEN",
     inStock: true,
@@ -20,6 +21,7 @@ export const products = [
   {
     id: 2,
     name: "Jupiter Wayfarer",
+    description:"Breezy, playful, and effortlessly chic — this polka dot summer dress is your go-to for sunny days and spontaneous adventures. Made from lightweight, breathable fabric, it features a flattering silhouette, adjustable straps, and a classic dot pattern that never goes out of style. Perfect for picnics, beach strolls, or brunch with friends — just add your favorite sandals and you're set.",
     price: 75,
     category: "WOMEN",
     inStock: true,
@@ -31,10 +33,11 @@ export const products = [
   },
   {
     id: 3,
-    name: "Saturn Sport Tee",
+    name: "Knitted Shirt",
+    description:"A cozy, knitted shirt that combines comfort and style. Perfect for layering or wearing on its own, this shirt features a soft, textured fabric that feels great against the skin. The relaxed fit and classic design make it a versatile addition to any wardrobe, suitable for both casual outings and more polished looks.",
     price: 45,
     category: "KIDS",
-    inStock: false,
+    inStock: true,
     images: [
       "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQjUT4nwv-oejFT1nMVQaLzWKR6df3D7scLq3w74baOgHVAZUCWByXpgRd3A_g-UM2T6UEbMdFY89crT6qUT0uB535lHmc9RCLeM2JmBC3NZURntZtl4NNhe9PY1uIQwP7wzzsnhA&usqp=CAc",
        "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQjUT4nwv-oejFT1nMVQaLzWKR6df3D7scLq3w74baOgHVAZUCWByXpgRd3A_g-UM2T6UEbMdFY89crT6qUT0uB535lHmc9RCLeM2JmBC3NZURntZtl4NNhe9PY1uIQwP7wzzsnhA&usqp=CAc",,
@@ -44,6 +47,7 @@ export const products = [
   {
     id: 4,
     name: "T-shirt",
+    description: "A grunge t-shirt that combines comfort and style. Made from soft, breathable fabric, it features a relaxed fit and a timeless design. Perfect for casual outings or lounging at home, this t-shirt is a versatile wardrobe staple that pairs well with jeans, shorts, or skirts.",
     price: 55,
     category: "MEN",
     inStock: false,
@@ -55,7 +59,8 @@ export const products = [
   },
   {
     id: 5,
-    name: "Classic Leather Jacket",
+    name: "Classic Pink Polo",
+    description: "A classic pink polo shirt that combines elegance and comfort. Made from high-quality cotton, it features a timeless design with a button-down collar and short sleeves. Perfect for casual outings or semi-formal occasions, this polo shirt adds a touch of sophistication to any outfit.",
     price: 120,
     category: "MEN",
     inStock: true,
@@ -68,6 +73,7 @@ export const products = [
   {
     id: 6,
     name: "Tailored Coat",
+    description: "A tailored coat that exudes sophistication and style. Made from high-quality wool, it features a classic design with a single-breasted front, notch lapels, and two front pockets. Perfect for formal occasions or adding a touch of elegance to your everyday look.",
     price: 250,
     category: "MEN",
     inStock: true,
@@ -82,6 +88,7 @@ export const products = [
   {
     id: 7,
     name: "Elegant Evening Dress",
+    description: "An elegant evening dress that combines sophistication and style. Made from luxurious fabric, it features a flattering silhouette with a fitted bodice and flowing skirt. Perfect for formal events, this dress is designed to make you feel confident and beautiful.",
     price: 350,
     category: "WOMEN",
     inStock: true,
@@ -93,7 +100,8 @@ export const products = [
   },
   {
     id: 8,
-    name: "Luxury Blazer",
+    name: "Granny Frame mini bag",
+    description: "A chic and stylish mini bag that adds a touch of elegance to any outfit. Made from high-quality materials, it features a unique granny frame design with a secure clasp closure. Perfect for carrying your essentials, this mini bag is both functional and fashionable.",
     price: 420,
     category: "WOMEN",
     inStock: true,
@@ -107,7 +115,8 @@ export const products = [
 
   {
     id: 9,
-    name: "Cartoon Hoodie",
+    name: "Elegant Kids' Jacket",
+    description: "A stylish and comfortable jacket designed for kids. Made from high-quality materials, it features a classic design with a zip-up front and two side pockets. Perfect for keeping your little ones warm and fashionable during chilly days.",
     price: 35,
     category: "KIDS",
     inStock: true,
@@ -119,10 +128,11 @@ export const products = [
   },
   {
     id: 10,
-    name: "Summer Dress",
+    name: "Green Knitted Sweater",
+    description: "A cozy, knitted sweater that combines comfort and style. Made from soft, breathable fabric, it features a relaxed fit and a classic design. Perfect for casual outings or lounging at home, this sweater is a versatile wardrobe staple that pairs well with jeans, shorts, or skirts.",
     price: 45,
     category: "KIDS",
-    inStock: true,
+    inStock: false,
     images: [
       "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSxFpnLUHVeyvo3K37XO4kzpWw8lKHUnjM7E76_KAesHIofHmSiBTB7z1S_aGhuGgN5vMISimYUoPs2gbBsGgDKmBUtLsmbos97sQRFHiLGTzTS8XjpAXLvRbavNilESSI0Xy3o6Q&usqp=CAc",
       "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSxFpnLUHVeyvo3K37XO4kzpWw8lKHUnjM7E76_KAesHIofHmSiBTB7z1S_aGhuGgN5vMISimYUoPs2gbBsGgDKmBUtLsmbos97sQRFHiLGTzTS8XjpAXLvRbavNilESSI0Xy3o6Q&usqp=CAc",

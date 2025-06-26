@@ -25,7 +25,7 @@ function CartItem({ item, variant }) {
         <p className={styles.price}>{getPrice(item.price)}</p>
         <div className={rowClass}>
           <div>
-            <p className={styles.label}>Size:</p>
+            <p className={styles.label}>SIZE:</p>
             <SizeSelector
               selectedSize={item.size}
               onSelectSize={(size) => updateCartItemSize(item.id, size)}

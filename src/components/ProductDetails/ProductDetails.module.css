@@ -1,9 +1,11 @@
 .productDetail {
   display: flex;
-  gap: 60px;
+  gap: 100px;
   padding: 40px 60px;
   background-color: #fff;
   font-family: 'Raleway', sans-serif;
+  margin-top: 35px;
+  margin-left: 60px;
 }
 
 /* Left column contains thumbnails and main image */
@@ -19,6 +21,7 @@
   flex-direction: column;
   gap: 16px;
   justify-content: center;
+  margin-bottom: 300px;
 }
 
 /* Single thumbnail */
@@ -31,9 +34,6 @@
   transition: border 0.2s ease-in-out;
 }
 
-.thumbnailSelected {
-  border-color: #1dcf65;
-}
 
 /* Main image preview */
 .imagePreview {
@@ -66,15 +66,22 @@
 }
 
 .sizeLabel {
-  font-weight: 500;
-  font-size: 16px;
-  margin: 24px 0 12px;
+  color: #1D1F22;
+text-align: flex-start;
+font-family: "Roboto Condensed";
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 18px; /* 100% */
 }
 
 .price {
-  font-size: 20px;
-  font-weight: 700;
-  margin: 12px 0;
+color: #1D1F22;
+font-family: "Raleway", sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 18px; 
 }
 
 .sizeButton {
@@ -89,16 +96,10 @@
   font-size: 14px;
 }
 
-.sizeSelected {
-  background-color: #1dcf65;
-  color: #fff;
-  border-color: #1dcf65;
-}
-
 .addButton {
   padding: 16px 0;
   width: 250px;
-  background-color: #1dcf65;
+  background-color: #5ece7b;
   color: white;
   font-weight: bold;
   font-size: 14px;
@@ -117,4 +118,40 @@
   color: #1d1f22;
   line-height: 1.6;
   max-width: 400px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.stock{
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  color: rgb(182, 0, 0);
+}
+
+.size{
+    margin-bottom: 2px;
+     color: #1D1F22;
+text-align: flex-start;
+font-family: "Roboto Condensed";
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 18px; 
+}
+
+.pricee{
+  margin-top: 122px;
+     margin-bottom: 0px;
+      color: #1D1F22;
+text-align: flex-start;
+font-family: "Roboto Condensed";
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 18px; /* 100% */
 }

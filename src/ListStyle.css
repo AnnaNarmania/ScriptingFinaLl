@@ -21,7 +21,6 @@ h2 {
 .product {
   position: relative;
   width: 300px;
-  height: 444px;
   padding: 16px;
   box-sizing: border-box;
   background-color: white;
@@ -37,16 +36,17 @@ h2 {
   aspect-ratio: 1 / 1;
   background: #f5f5f5;
   margin-bottom: 24px;
-  width: 300px;
+  width: 270px;
   height: auto;     
-  overflow: hidden;  
+  overflow: hidden; 
+ 
   
 
 }
 
 .photo img {
 
-  width: 100%;
+  width: 270px;
   height: auto;
   object-fit: fill; 
 }

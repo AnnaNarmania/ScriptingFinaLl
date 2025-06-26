@@ -3,6 +3,7 @@ import { useCart } from "../../contexts/CartContext";
 import { useCurrency } from "../../contexts/CurrencyContext";
 import CartItem from "../CartItem/CartItem";
 import styles from "./CartPage.module.css";
+import { Link } from "react-router-dom";
 
 
 function CartPage() {
@@ -27,7 +28,9 @@ function CartPage() {
         <p className={styles.summaryTotal}>
           Total: <strong>{getPrice(totalPrice)}</strong>
         </p>
-        <button className={styles.continueButton}>CONTINUE</button>
+<Link to="/shippinginfopage">
+  <button className={styles.continueButton}>CONTINUE</button>
+</Link>
       </div>
     </div>
   );

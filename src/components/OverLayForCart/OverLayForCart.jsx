@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./OverLayForCart.module.css";
 import { useCart } from "../../contexts/CartContext";
 import { useCurrency } from "../../contexts/CurrencyContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CartItem from "../CartItem/CartItem";
 
 function OverLayForCart({ onClose }) {
@@ -37,7 +37,9 @@ function OverLayForCart({ onClose }) {
         <p className={styles.total}>Total: {getPrice(total)}</p>
         <div className={styles.actions}>
           <button onClick={handleViewBag}>VIEW BAG</button>
-          <button >CHECKOUT</button>
+          <Link to ="/shippinginfopage">
+          <button>CHECKOUT</button>
+          </Link>
         </div>
       </div>
     </div>

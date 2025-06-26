@@ -1,0 +1,99 @@
+.cartItem {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.info {
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: 0.85rem;
+}
+
+.image {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  display: block;
+  transition: width 0.2s, height 0.2s;
+}
+
+.imageLarge {
+  width: 180px;
+  height: 180px;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin: 0 0 3px;
+}
+
+.price {
+  font-weight: bold;
+  margin: 3px 0;
+  font-size: 1rem;
+}
+
+.label {
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.quantityControl {
+  display: flex;
+  flex-direction: column;
+  align-items:  center;
+    gap: 16px;
+  
+  
+}
+
+.qtyButton {
+  width: 36px;
+  height: 36px;
+  font-size: 1.2rem;
+  border: 1px solid #000;
+  background: #fff;
+  cursor: pointer;
+}
+
+.qtyValue {
+  font-size: 1.1rem;
+  font-weight: bold;
+  min-width: 24px;
+  text-align: center;
+}
+.rowLarge{
+    display: flex;
+  align-items: flex-start;      
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px; 
+  margin-top: 12px;
+  width: 100%;
+}
+
+.photoBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 18px;
+}
+
+.photoBlockWide {
+  gap: 48px;
+}
+
+.sizeSelector {
+  font-size: 0.8rem;
+}
+

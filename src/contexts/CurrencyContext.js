@@ -1,19 +1,35 @@
 import React, { createContext, useContext, useState } from "react";
 
-const Currency = createContext();
+const CurrencyContext = createContext();
 
-function CurrencyProvider({ children }) {
+const currencyRates = {
+  USD: 1,
+  EUR: 0.85,
+  JPY: 110,
+};
+
+const currencySymbols = {
+  USD: "$",
+  EUR: "€",
+  JPY: "¥",
+};
+
+export function CurrencyProvider({ children }) {
   const [currency, setCurrency] = useState("USD");
 
+  function getPrice(price) {
+    const rate = currencyRates[currency];
+    const symbol = currencySymbols[currency];
+    return `${symbol}${(price * rate).toFixed(2)}`;
+  }
+
   return (
-    <Currency.Provider value={{ currency, setCurrency }}>
+    <CurrencyContext.Provider value={{ currency, setCurrency, getPrice }}>
       {children}
-    </Currency.Provider>
+    </CurrencyContext.Provider>
   );
 }
 
-function useCurrency() {
-  return useContext(Currency);
+export function useCurrency() {
+  return useContext(CurrencyContext);
 }
-
-export { CurrencyProvider, useCurrency };

@@ -1,4 +1,3 @@
-
 h2 {
   color: #1d1f22;
   margin-bottom: 103px;
@@ -6,7 +5,6 @@ h2 {
   font-weight: 400;
   font-family: "Raleway", sans-serif;
 }
-
 
 .products {
   padding: 40px;
@@ -16,14 +14,22 @@ h2 {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(386px, 1fr));
   gap: 43px;
 }
 
-
 .product {
   position: relative;
+  width: 386px;
+  height: 444px;
   padding: 16px;
+  box-sizing: border-box;
+  background-color: white;
+  transition: box-shadow 0.3s ease;
+}
+
+.product:hover {
+  box-shadow: 0px 4px 35px 0px rgba(168, 172, 176, 0.19);
 }
 
 .photo {
@@ -31,7 +37,18 @@ h2 {
   aspect-ratio: 1 / 1;
   background: #f5f5f5;
   margin-bottom: 24px;
-  overflow: visible;
+  width: 386px;
+  height: auto;     
+  overflow: hidden;  
+  
+
+}
+
+.photo img {
+
+  width: 100%;
+  height: auto;
+  object-fit: contain; 
 }
 
 
@@ -45,13 +62,18 @@ h2 {
   font-weight: 300;
   align-items: center;
   justify-content: center;
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background: #f5f5f5;
+  margin-bottom: 24px;
+  overflow: visible;
+  background-color: rgba(255, 255, 255, 0.6);
 }
-
 
 .add-to-cart {
   position: absolute;
-  bottom: -16px;
-  right: 16px;
+  bottom: 72px;
+  right: 32px;
   width: 52px;
   height: 52px;
   background: #5ece7b;
@@ -63,34 +85,32 @@ h2 {
   opacity: 0;
   transition: opacity 0.3s ease;
   cursor: pointer;
-}
-
-.product:hover {
-  box-shadow: 0px 4px 35px 0px rgba(168, 172, 176, 0.19);
+  z-index: 2;
 }
 
 .product:hover .add-to-cart {
   opacity: 1;
 }
 
-
 .details h3 {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 18px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   font-family: "Raleway", sans-serif;
+  color: #1d1f22;
 }
 
 .price {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 18px;
   font-family: "Raleway", sans-serif;
+  color: #1d1f22;
 }
 
-span {
-  font-family: "Raleway", sans-serif;
-}
-
+span,
 option {
   font-family: "Raleway", sans-serif;
+}
+.product:hover .photo img {
+  transform: scale(1.1);
 }

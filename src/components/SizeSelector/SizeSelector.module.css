@@ -1,0 +1,21 @@
+.sizeSelector {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.sizeButton {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid gray;
+  background-color: white;
+  cursor: pointer;
+}
+
+.sizeButton.active {
+  background-color: black;
+  color: white;
+}
+
+.sizeButton:hover {
+  background-color: #f0f0f0;
+}

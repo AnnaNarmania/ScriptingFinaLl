@@ -5,6 +5,8 @@
   padding-right: 130px;
   padding-left: 130px;
   padding-bottom: 0px;
+  z-index: 2000;
+  position: relative;
 }
 .categories {
   display: flex;

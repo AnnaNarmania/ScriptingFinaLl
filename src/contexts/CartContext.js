@@ -1,36 +1,77 @@
-import React, { createContext, useState, useContext } from "react";
+import React, { createContext, useContext, useState } from "react";
 
-const Cart = createContext();
+const CartContext = createContext();
 
-function CartProvider({ children }) {
+export function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
 
   function addToCart(product) {
-    setCartItems((items) => {
-      const exists = items.find(
+    setCartItems((prevItems) => {
+      const match = prevItems.find(
         (item) => item.id === product.id && item.size === product.size
       );
-
-      if (exists) {
-        return items.map((item) => {
-          if (item.id === product.id && item.size === product.size) {
-            return { ...item, quantity: item.quantity + 1 };
-          }
-          return item;
-        });
+      if (match) {
+        return prevItems.map((item) =>
+          item.id === product.id && item.size === product.size
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
       }
-
-      return [...items, { ...product, quantity: 1 }];
+      return [...prevItems, { ...product, quantity: 1 }];
     });
   }
 
+  function incrementQuantity(product) {
+    addToCart(product);
+  }
+
+  function decrementQuantity(product) {
+    setCartItems((prevItems) =>
+      prevItems
+        .map((item) =>
+          item.id === product.id && item.size === product.size
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
+        )
+        .filter((item) => item.quantity > 0)
+    );
+  }
+
+  function removeFromCart(product) {
+    setCartItems((prevItems) =>
+      prevItems.filter(
+        (item) =>
+          !(item.id === product.id && item.size === product.size)
+      )
+    );
+  }
+
+  function updateCartItemSize(itemId, newSize) {
+    setCartItems((prevItems) =>
+      prevItems.map((item) =>
+        item.id === itemId
+          ? { ...item, size: newSize }
+          : item
+      )
+    );
+  }
+
   return (
-    <Cart.Provider value={{ cartItems, addToCart }}>{children}</Cart.Provider>
+    <CartContext.Provider
+      value={{
+        cartItems,
+        addToCart,
+        incrementQuantity,
+        decrementQuantity,
+        removeFromCart,
+        updateCartItemSize,
+      }}
+    >
+      {children}
+    </CartContext.Provider>
   );
 }
 
-function useCart() {
-  return useContext(Cart);
+export function useCart() {
+  return useContext(CartContext);
 }
-
-export { CartProvider, useCart };

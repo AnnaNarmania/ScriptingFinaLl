@@ -83,14 +83,19 @@ const validateData = (data) => {
   const total = subtotal;
 
   return (
-    <div className="shipping-container">
+    <div className="shippingcontainer">
         
-        <div className='shipping-form'>
-            <div className="progress-steps">
-        Cart &gt; Details &gt; <span className="current-step">Shipping</span> &gt; Payment
-        </div>
+        <div className='shippingform'>
+            <div className="progresssteps">
+<div className="progresssteps">
+  <p className="progressstepsprevious">Cart </p> 
+  <p className="progressstep"> &gt;   Details </p> 
+  <p className="progressstep"> &gt;   <span className="current-step">Shipping</span> </p>
+  <p className="progressstep"> &gt;   Payment </p>
+</div>
+</div>
         <form onSubmit={handleSubmit}  >
-          <h2 className="section-title">Contact</h2>
+          <h2 className="sectiontitle">Contact</h2>
           <input
             type="text"
             name="contact"
@@ -103,8 +108,8 @@ const validateData = (data) => {
           
           <div className="divider"></div>
 
-          <h2 className="section-title">Shipping Address</h2>
-          <div className="name-fields">
+          <h2 className="sectiontitle">Shipping Address</h2>
+          <div className="namefields">
             <input
               type="text"
               name="firstName"
@@ -112,7 +117,7 @@ const validateData = (data) => {
               value={formData.firstName}
               onChange={(e) => handleChange(e)}
               required
-              className="input-field"
+              className="inputfield"
             />
             <input
               type="text"
@@ -121,7 +126,7 @@ const validateData = (data) => {
               value={formData.lastName}
               onChange={(e) => handleChange(e)}
               required
-              className="input-field"
+              className="inputfield"
             />
           </div>
 
@@ -132,7 +137,7 @@ const validateData = (data) => {
             value={formData.address}
             onChange={(e) => handleChange(e)}
             required
-            className="input-field"
+            className="inputfield"
           />
 
           <input
@@ -140,11 +145,11 @@ const validateData = (data) => {
             name="shippingNote"
             placeholder="Shipping note (optional)"
             value={formData.shippingNote}
-            className="input-field"
+            className="inputfield"
             onChange={(e) => handleChange(e)}
           />
 
-          <div className="location-fields">
+          <div className="locationfields">
             <input
               type="text"
               name="city"
@@ -152,7 +157,7 @@ const validateData = (data) => {
               value={formData.city}
               onChange={(e) => handleChange(e)}
               required
-              className="input-field"
+              className="inputfield"
             />
             <input
               type="text"
@@ -161,7 +166,7 @@ const validateData = (data) => {
               value={formData.postalCode}
               onChange={(e) => handleChange(e)}
               required
-              className="input-field"
+              className="inputfield"
             />
             <input
               type="text"
@@ -170,12 +175,12 @@ const validateData = (data) => {
               value={formData.province}
               onChange={(e) => handleChange(e)}
               required
-              className="input-field"
+              className="inputfield"
             />
           </div>
 
-          <div className="country-select-wrapper">
-  <label htmlFor="country" className="floating-label">Country/Region</label>
+          <div className="countryselectwrapper">
+  <label htmlFor="country" className="floatinglabel">Country/Region</label>
   <select
     id="country"
     name="country"
@@ -194,25 +199,25 @@ const validateData = (data) => {
 </div>
 
 
-          <div className="save-info">
+          <div className="saveinfo">
             <input
               type="checkbox"
               id="saveInfo"
               checked={saveInfo}
               onChange={() => setSaveInfo(!saveInfo)}
-              className="save-checkbox"
+              className="savecheckbox"
             />
-            <label htmlFor="saveInfo" className="save-label">
+            <label htmlFor="saveInfo" className="savelabel">
               Save this information for a future fast checkout
             </label>
           </div>
         </form>
 
 
-        <div className="button-group">
+        <div className="buttongroup">
             <button 
                 type="button" 
-                className="back-button"
+                className="backbutton"
                 onClick={() => navigate(-1)}
             >
                 Back to cart
@@ -220,7 +225,7 @@ const validateData = (data) => {
 
             <button 
                 type="submit" 
-                className="continue-button"
+                className="continuebutton"
                 onClick={handleSubmit}
             >
                 Go to shipping
@@ -228,7 +233,7 @@ const validateData = (data) => {
            
         </div>
          {erroMessage && (
-            <p className="error-message">{erroMessage}</p>
+            <p className="errormessage">{erroMessage}</p>
             )}
         </div>
 
@@ -238,30 +243,30 @@ const validateData = (data) => {
               <img 
                 src={item.images[0]} 
                 alt={item.name} 
-                className="product-image"
+                className="productimage"
               />
-              <div className="item-details">
-                <p className="item-name">{item.name}</p>
-                <p className="item-price">${item.price.toFixed(2)}</p>
+              <div className="itemdetails">
+                <p className="itemname">{item.name}</p>
+                <p className="itemprice">${item.price.toFixed(2)}</p>
               </div>
             </div>
           ))}
           
           <div className="divider"></div>
 
-          <div className="summary-row">
+          <div className="summaryrow">
             <span>Subtotal</span>
             <span>${subtotal.toFixed(2)}</span>
           </div>
           
-          <div className="summary-row">
+          <div className="summaryrow">
             <span>Shipping</span>
             <span>Calculated at the next step</span>
           </div>
           
           <div className="divider"></div>
           
-          <div className="summary-total">
+          <div className="summarytotal">
             <span>Total</span>
             <span>${total.toFixed(2)}</span>
           </div>

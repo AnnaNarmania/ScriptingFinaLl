@@ -32,29 +32,28 @@ const ShippingMethodPage = () => {
   const total = subtotal + shippingCost;
 
   return (
-    <div className="shipping-method-container">
-<div className="progress-steps">
-  Cart &gt; Details &gt; <span className="current-step">Shipping</span> &gt; Payment
+    <div className="shippingmethodcontainer">
+
+      <div className="shippingmethodcontent">
+        <div className="progresssteps">
+  <p className="progressstepsprevious">Cart </p> 
+  <p className="progressstepsprevious"> &gt;   Details </p> 
+  <p className="progressstep"> &gt;   <span className="current-step">Shipping</span> </p>
+  <p className="progressstep"> &gt;   Payment </p>
 </div>
-
-
-      <div className="shipping-method-content">
-        <div className="shipping-method-form">
-          <p>contact {contact}</p>
+        <div className="shippingmethodform1">
+          <div>contact {contact}</div>   
+                    <div className="divider"></div> 
+          <div> ship to {`${address}, ${postalCode}, ${city} ${province}, ${country}`}</div>
+          </div>
           
-          <div className="divider"></div>
-          {/* concatenacia addressic daamate */}
-          <p> ship to {`${address}, ${postalCode}, ${city} ${province}, ${country}`}</p>
+          <h3>Shipping method</h3>
           
-          <div className="divider"></div>
-          
-          <h2>Shipping method</h2>
-          
-          <form onSubmit={handleSubmit}>
+          <form className='shippingmethodform' onSubmit={handleSubmit}>
             {shippingOptions.map(option => (
               <div 
                 key={option.id} 
-                className={`shipping-option ${selectedMethod === option.id ? 'selected' : ''}`}
+                className={`shippingoption ${selectedMethod === option.id ? 'selected' : ''}`}
                 onClick={() => setSelectedMethod(option.id)}
               >
                 <input
@@ -71,7 +70,7 @@ const ShippingMethodPage = () => {
               </div>
             ))}
             
-            <div className="button-group">
+            <div className="buttongroup">
               <button type="button" onClick={() => navigate(-1)}>
                 Back to details
               </button>
@@ -81,44 +80,38 @@ const ShippingMethodPage = () => {
             </div>
           </form>
         </div>
-        
-   <div className="ordersummary">
+     
+          
+          <div className="rigthside">
           {cartItems.map(item => (
-            <div key={item.id} className="order-item">
+            <div key={item.id} className="orderitem">
               <img 
                 src={item.images[0]} 
                 alt={item.name} 
-                className="product-image"
+                className="productimage"
               />
-              <div className="item-details">
-                <p className="item-name">{item.name}</p>
-                <p className="item-price">${item.price.toFixed(2)}</p>
+              <div className="itemdetails">
+                <p className="itemname">{item.name}</p>
+                <p className="itemprice">${item.price.toFixed(2)}</p>
               </div>
             </div>
-          ))}
-          
-          
-          <div className="divider"></div>
-          
-          <div className="summary-row">
+          ))}          
+                    <div className="divider"></div>
+          <div className="summaryrow">
             <span>Subtotal</span>
             <span>${subtotal.toFixed(2)}</span>
           </div>
-          
-          <div className="summary-row">
+          <div className="summarrow">
             <span>Shipping</span>
-            <span>{shippingCost === 0 ? 'Free Shipping' : `$${shippingCost.toFixed(2)}`}</span>
+            <span className='shippingmethod'>{shippingCost === 0 ? 'Free Shipping' : `$${shippingCost.toFixed(2)}`}</span>
           </div>
-          
           <div className="divider"></div>
-          
-          <div className="summary-total">
+          <div className="summarytotal">
             <span>Total</span>
             <span>${total.toFixed(2)}</span>
           </div>
         </div>
-      </div>
-    </div>
+</div>
   );
 };
 

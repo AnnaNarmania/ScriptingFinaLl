@@ -1,4 +1,4 @@
-.shipping-container {
+.shippingcontainer {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
@@ -6,18 +6,19 @@
   display:flex;
 }
 
-.progress-steps {
-  color: #666;
+.progresssteps {
   margin-bottom: 2rem;
-  font-size: 0.9rem;
+  display: flex;
+}
+.progressstep{
+  color: #666;
 }
 
-.current-step {
-  font-weight: bold;
-  color: #000;
+.progressstepsprevious{
+  color: #1dbc5e;
 }
 
-.shipping-content {
+.shippingcontent {
   display: flex;
 }
 .ordersummary{
@@ -25,7 +26,7 @@
   margin: 10%;
 }
 
-.shipping-form {
+.shippingform {
   flex: 2;
   background: #fff;
   padding: 1.5rem;
@@ -40,7 +41,7 @@
   font-size: 0.9rem;
 }
 
-.section-title {
+.sectiontitle {
   font-size: 1.2rem;
   margin: 0 0 1rem 0;
   font-weight: 600;
@@ -52,7 +53,7 @@
   margin: 1.5rem 0;
 }
 
-.input-field {
+.inputfield {
   width: 95%;
   padding: 0.8rem;
   margin-bottom: 1rem;
@@ -60,35 +61,35 @@
   font-size: 0.9rem;
 }
 
-.name-fields {
+.namefields {
   display: flex;
   gap: 1rem;
 }
 
-.name-fields .input-field {
+.namefields .input-field {
   flex: 1;
 }
 
-.location-fields {
+.locationfields {
   display: flex;
   gap: 1rem;
 }
 
-.location-fields .input-field {
+.locationfields .input-field {
   flex: 1;
 }
 
-.country-field {
+.countryfield {
   margin: 1rem 0;
 }
 
-.country-label {
+.countrylabel {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
 
-.country-select {
+.countryselect {
   width: 100%;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -96,59 +97,57 @@
   font-size: 0.9rem;
 }
 
-.save-info {
+.saveinfo {
   display: flex;
   align-items: center;
   margin: 1.5rem 0;
 }
 
-.save-checkbox {
+.savecheckbox {
   margin-right: 0.5rem;
 }
 
-.save-label {
+.savelabel {
   font-size: 0.9rem;
 }
 
-
-
-.order-item {
+.orderitem {
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
   align-items: center;
 }
 
-.product-image {
-  width: 60px;
-  height: 60px;
+.productimage {
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 4px;
   border: 1px solid #eee;
 }
 
-.item-details {
+.itemdetails {
   flex: 1;
 }
 
-.item-name {
+.itemname {
   font-weight: 500;
   margin: 0;
 }
 
-.item-price {
+.itemprice {
   margin: 0.3rem 0 0 0;
   color: #1dbc5e;
 }
 
-.summary-row {
+.summaryrow {
   display: flex;
   justify-content: space-between;
   margin: 0.5rem 0;
   font-size: 0.9rem;
 }
 
-.summary-total {
+.summarytotal {
   display: flex;
   justify-content: space-between;
   margin: 1rem 0;
@@ -156,13 +155,13 @@
   font-size: 1.1rem;
 }
 
-.button-group {
+.buttongroup {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
 }
 
-.back-button {
+.backbutton {
   flex: 1;
   padding: 0.8rem;
   background: #fff;
@@ -173,7 +172,7 @@
   color: #1dbc5e;
 }
 
-.continue-button {
+.continuebutton {
   flex: 1;
   padding: 0.8rem;
   background-color: #1dbc5e;
@@ -184,14 +183,13 @@
   font-weight: 500;
 }
 
-
-.country-select-wrapper {
+.countryselectwrapper {
   position: relative;
   margin-top: 20px;
   width: 100%;
 }
 
-.floating-label {
+.floatinglabel {
   position:absolute;
   top: 5px;
   left: 12px;
@@ -203,7 +201,7 @@
   pointer-events: none;
 }
 
-.styled-select {
+.styledselect {
   width: 100%;
   padding-top:40px; 
   font-size: 16px;

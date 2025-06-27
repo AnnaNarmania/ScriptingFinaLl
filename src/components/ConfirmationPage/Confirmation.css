@@ -1,9 +1,9 @@
 .confirmation-page-container {
   display: flex;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
-  gap: 2rem;
+  padding: 32px;
+  gap: 32px;
 }
 
 .confirmation-left {
@@ -15,6 +15,7 @@
   background: #fafafa;
   padding: 2rem;
   border-left: 1px solid #eee;
+  height: 600px
 }
 
 .progress-steps {
@@ -24,50 +25,36 @@
 }
 
 .confirmation-message {
-  background: #e9ffe9;
-  border: 1px solid #c6f3c6;
   padding: 2rem;
   border-radius: 8px;
   text-align: center;
 }
 
-.checkmark-circle {
-  width: 60px;
-  height: 60px;
-  border: 3px solid #80d490;
-  border-radius: 50%;
-  margin: 0 auto 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  color: #4caf50;
-}
 
 .confirmation-message h1 {
-  margin: 0.5rem 0;
-  color: #2e7d32;
+  margin: 16px 0;
+  color: #272727;
+  font-family: "Raleway", sans-serif;
 }
 
 .order-id {
   font-size: 0.9rem;
-  color: #4caf50;
+  color: #56B280;
   margin-bottom: 1rem;
+  font-family: "Raleway", sans-serif;
 }
 
-.thanks-msg {
-  margin-top: 1rem;
-  font-weight: 500;
-}
 
 .back-button {
   margin-top: 2rem;
   padding: 0.75rem 1.5rem;
-  background-color: #4caf50;
+  background-color: #56B280;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  width: 248px;
+  font-size: 20px;
 }
 
 .order-item {
@@ -112,26 +99,25 @@
 .summary-total {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 0.8rem;
-  font-size: 0.9rem;
-  color: #333;
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
 }
+
 
 .summary-total {
   font-weight: bold;
-  font-size: 1.05rem;
+  font-size: 24px;
   color: #222;
 }
 
-@media (max-width: 768px) {
-  .confirmation-page-container {
-    flex-direction: column;
-    padding: 1rem;
-  }
 
-  .confirmation-right {
-    border-left: none;
-    border-top: 1px solid #eee;
-    margin-top: 2rem;
-  }
+
+.scroll {
+  font-family: "raleway", sans-serif;
+  max-height: 180px;
+  overflow-y: auto;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }

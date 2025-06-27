@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { useCart } from '../../contexts/CartContext'; // Correct import path
+import { useCart } from '../../contexts/CartContext'; 
 import './ShippingMethodPage.css';
 import { useForm } from '../../contexts/FormContext';
 
@@ -12,7 +12,7 @@ const ShippingMethodPage = () => {
     setSelectedMethod,
     formData: { contact, address, postalCode, city, province, country },
     } = useForm();
-//   const [selectedMethod, setSelectedMethod] = useState('standard');
+
 
   
 

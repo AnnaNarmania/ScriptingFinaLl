@@ -93,8 +93,8 @@ const validateData = (data) => {
 <div className="progresssteps">
   <p className="progressstepsprevious">Cart </p> 
   <p className="progressstep"> &gt;   <span className="current-step">Details </span> </p> 
-  <p className="progressstep"> &gt; Shipping</p>
-  <p className="progressstep"> &gt;   Payment </p>
+  <p className="progressstepNext"> &gt; Shipping</p>
+  <p className="progressstepNext"> &gt;   Payment </p>
 </div>
 </div>
         <form onSubmit={handleSubmit}  >

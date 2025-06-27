@@ -8,14 +8,13 @@
   margin-left: 60px;
 }
 
-/* Left column contains thumbnails and main image */
 .leftColumn {
   display: flex;
   flex-direction: row;
   gap: 24px;
 }
 
-/* Thumbnail section */
+
 .thumbnails {
   display: flex;
   flex-direction: column;
@@ -24,7 +23,7 @@
   margin-bottom: 300px;
 }
 
-/* Single thumbnail */
+
 .thumbnail {
   width: 80px;
   height: 80px;
@@ -38,7 +37,7 @@
 }
 
 
-/* Main image preview */
+
 .imagePreview {
   width: 450px;
   height: 450px;
@@ -54,7 +53,7 @@
   object-fit: cover;
 }
 
-/* Info panel (right side) */
+
 .info {
   flex: 1;
   display: flex;
@@ -75,7 +74,7 @@ font-family: "Roboto Condensed";
 font-size: 18px;
 font-style: normal;
 font-weight: 700;
-line-height: 18px; /* 100% */
+line-height: 18px; 
 }
 
 .price {
@@ -156,5 +155,5 @@ font-family: "Roboto Condensed";
 font-size: 18px;
 font-style: normal;
 font-weight: 700;
-line-height: 18px; /* 100% */
+line-height: 18px; 
 }

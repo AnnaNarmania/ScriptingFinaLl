@@ -14,21 +14,24 @@
 .checkout-left {
   padding-right: 2rem;
     margin-top: 50px;
+    height: 100%;
 }
 
 .checkout-right {
  
     flex: 1;
   background: #f5f5f5;
-  padding: 30px 20px
+  padding: 30px 20px;
+  height: 100%;
 }
 
 .progresssteps {
   display: flex;
   gap: 8px;
-  font-size: 14px;
-  margin-bottom: 20px;
+  font-size: 14px;;
   font-family: "roboto", sans-serif;
+  margin-bottom: 5px;
+  margin-left: 2px;
 }
 .progressstepsprevious {
   color: #56B280 !important;
@@ -133,6 +136,7 @@ h3 {
   color: #dc2626;
   font-size: 0.8rem;
   margin-top: 0.25rem;
+  font-family: "raleway", sans-serif;
 }
 
 .row {
@@ -208,7 +212,7 @@ button.link {
 
 .summary-total {
   font-weight: bold;
-  font-size: 35px;
+  font-size: 24px;
 }
 
 .divider {
@@ -217,11 +221,12 @@ button.link {
   margin: 1rem 0;
 }
 
-/* Scoped only to .payment-page-container to prevent global override */
+
 .payment-page-container * {
   box-sizing: border-box;
 }
 .scroll {
+  font-family: "raleway", sans-serif;
   max-height: 180px;
   overflow-y: auto;
   margin-bottom: 16px;
@@ -246,3 +251,4 @@ svg{
   border-radius: 4px;
   font-size: 0.9rem;
 }
+

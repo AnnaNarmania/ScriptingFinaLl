@@ -41,12 +41,13 @@ function OverLayForCart({ onClose }) {
             <CartItem key={item.id + item.size} item={item} />
           ))}
         </div>
+        <div className={styles.footer}>
         <p className={styles.total}>Total: {getPrice(total)}</p>
         <div className={styles.actions}>
           <button onClick={handleViewBag}>VIEW BAG</button>
          
           <button onClick={handleCheckout}>CHECKOUT</button>
-          
+          </div>
         </div>
       </div>
       </OutsideClickHandler>

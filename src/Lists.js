@@ -15,7 +15,7 @@ export const products = [
     images: [
       "https://contendersclothing.com/cdn/shop/files/20240412-Rocky-ApolloShorts-NEW-ECOM-1.jpg?v=1712955719",
       "https://contendersclothing.com/cdn/shop/files/20240412-Rocky-ApolloShorts-NEW-ECOM-1.jpg?v=1712955719",
-      "https://contendersclothing.com/cdn/shop/files/20240412-Rocky-ApolloShorts-NEW-ECOM-1.jpg?v=1712955719"
+      "https://focus.courrierinternational.com/2022/02/05/0/0/841/533/1280/0/60/0/1a04880_1644022456699-baby-yoda-mandalorian.jpg"
     ]
   },
   {
@@ -28,7 +28,7 @@ export const products = [
     images: [
       "https://cdn-images.farfetch-contents.com/23/60/22/65/23602265_53684013_1000.jpg",
       "https://cdn-images.farfetch-contents.com/23/60/22/65/23602265_53684013_1000.jpg",
-      "https://cdn-images.farfetch-contents.com/23/60/22/65/23602265_53684013_1000.jpg"
+      "https://focus.courrierinternational.com/2022/02/05/0/0/841/533/1280/0/60/0/1a04880_1644022456699-baby-yoda-mandalorian.jpg"
     ]
   },
   {
@@ -41,7 +41,7 @@ export const products = [
     images: [
       "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQjUT4nwv-oejFT1nMVQaLzWKR6df3D7scLq3w74baOgHVAZUCWByXpgRd3A_g-UM2T6UEbMdFY89crT6qUT0uB535lHmc9RCLeM2JmBC3NZURntZtl4NNhe9PY1uIQwP7wzzsnhA&usqp=CAc",
        "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQjUT4nwv-oejFT1nMVQaLzWKR6df3D7scLq3w74baOgHVAZUCWByXpgRd3A_g-UM2T6UEbMdFY89crT6qUT0uB535lHmc9RCLeM2JmBC3NZURntZtl4NNhe9PY1uIQwP7wzzsnhA&usqp=CAc",,
-      "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQjUT4nwv-oejFT1nMVQaLzWKR6df3D7scLq3w74baOgHVAZUCWByXpgRd3A_g-UM2T6UEbMdFY89crT6qUT0uB535lHmc9RCLeM2JmBC3NZURntZtl4NNhe9PY1uIQwP7wzzsnhA&usqp=CAc"
+      "https://focus.courrierinternational.com/2022/02/05/0/0/841/533/1280/0/60/0/1a04880_1644022456699-baby-yoda-mandalorian.jpg"
     ]
   },
   {
@@ -54,7 +54,7 @@ export const products = [
     images: [
       "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTcw6uYe-H58d1NmAqyuhjrjudvxb5a6gZDvju91elvs9Mxhlvx5ZQ0tfMO26yc_5uYFI6HnCK6l0bUFFK1B7MkK-rNguwYDJwdjXaS0tEd-M8oXtXcrNCHhS4nMXZPdC4Eoy9oiA&usqp=CAc",
       "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTcw6uYe-H58d1NmAqyuhjrjudvxb5a6gZDvju91elvs9Mxhlvx5ZQ0tfMO26yc_5uYFI6HnCK6l0bUFFK1B7MkK-rNguwYDJwdjXaS0tEd-M8oXtXcrNCHhS4nMXZPdC4Eoy9oiA&usqp=CAc",
-      "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTcw6uYe-H58d1NmAqyuhjrjudvxb5a6gZDvju91elvs9Mxhlvx5ZQ0tfMO26yc_5uYFI6HnCK6l0bUFFK1B7MkK-rNguwYDJwdjXaS0tEd-M8oXtXcrNCHhS4nMXZPdC4Eoy9oiA&usqp=CAc"
+      "https://focus.courrierinternational.com/2022/02/05/0/0/841/533/1280/0/60/0/1a04880_1644022456699-baby-yoda-mandalorian.jpg"
     ]
   },
   {
@@ -67,7 +67,7 @@ export const products = [
     images: [
       "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTP_BYvsmUXGhDWzfl8Wum-_Wy4yxyHVyyhaQYBzhaB6w7WpvrtT2mqqo2gfp9NWj638wk5KXDWGvEXUKAqU_O3lDJGfsaN4xcS5ESZHtixATAdiIeYzUSbNRJFxwfQONh5eoOWqrU&usqp=CAc",
       "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTP_BYvsmUXGhDWzfl8Wum-_Wy4yxyHVyyhaQYBzhaB6w7WpvrtT2mqqo2gfp9NWj638wk5KXDWGvEXUKAqU_O3lDJGfsaN4xcS5ESZHtixATAdiIeYzUSbNRJFxwfQONh5eoOWqrU&usqp=CAc",
-      "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTP_BYvsmUXGhDWzfl8Wum-_Wy4yxyHVyyhaQYBzhaB6w7WpvrtT2mqqo2gfp9NWj638wk5KXDWGvEXUKAqU_O3lDJGfsaN4xcS5ESZHtixATAdiIeYzUSbNRJFxwfQONh5eoOWqrU&usqp=CAc"
+      "https://focus.courrierinternational.com/2022/02/05/0/0/841/533/1280/0/60/0/1a04880_1644022456699-baby-yoda-mandalorian.jpg"
     ]
   },
   {
@@ -80,7 +80,7 @@ export const products = [
     images: [
       "https://cdn-images.farfetch-contents.com/25/63/61/88/25636188_55782628_1000.jpg",
       "https://cdn-images.farfetch-contents.com/25/63/61/88/25636188_55782628_1000.jpg",
-      "https://cdn-images.farfetch-contents.com/25/63/61/88/25636188_55782628_1000.jpg"
+      "https://focus.courrierinternational.com/2022/02/05/0/0/841/533/1280/0/60/0/1a04880_1644022456699-baby-yoda-mandalorian.jpg"
     ]
   },
 
@@ -95,7 +95,7 @@ export const products = [
     images: [
       "https://www.mytheresa.com/media/1094/1238/100/3e/P00917723.jpg",
       "https://www.mytheresa.com/media/1094/1238/100/3e/P00917723.jpg",
-      "https://www.mytheresa.com/media/1094/1238/100/3e/P00917723.jpg"
+      "https://focus.courrierinternational.com/2022/02/05/0/0/841/533/1280/0/60/0/1a04880_1644022456699-baby-yoda-mandalorian.jpg"
     ]
   },
   {
@@ -108,7 +108,7 @@ export const products = [
     images: [
       "https://www.mytheresa.com/media/1094/1238/100/a6/P01059320.jpg",
       "https://www.mytheresa.com/media/1094/1238/100/a6/P01059320.jpg",
-      "https://www.mytheresa.com/media/1094/1238/100/a6/P01059320.jpg"
+      "https://focus.courrierinternational.com/2022/02/05/0/0/841/533/1280/0/60/0/1a04880_1644022456699-baby-yoda-mandalorian.jpg"
     ]
   },
 
@@ -123,7 +123,7 @@ export const products = [
     images: [
       "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ8HHJLk0UovVTNSXD-QPTNS5Pq5IjrqTo_2ETOx_BCiCEYYBBGldPRz5V3ZsCMuc71FkF5-RCZLIKkMl5rCeJ1ppZRFLjkMUk82wb6ICcDv-jtbw2iB_HqFut5A9J9-2c7kQHzT7U&usqp=CAc",
       "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ8HHJLk0UovVTNSXD-QPTNS5Pq5IjrqTo_2ETOx_BCiCEYYBBGldPRz5V3ZsCMuc71FkF5-RCZLIKkMl5rCeJ1ppZRFLjkMUk82wb6ICcDv-jtbw2iB_HqFut5A9J9-2c7kQHzT7U&usqp=CAc",
-      "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ8HHJLk0UovVTNSXD-QPTNS5Pq5IjrqTo_2ETOx_BCiCEYYBBGldPRz5V3ZsCMuc71FkF5-RCZLIKkMl5rCeJ1ppZRFLjkMUk82wb6ICcDv-jtbw2iB_HqFut5A9J9-2c7kQHzT7U&usqp=CAc"
+      "https://focus.courrierinternational.com/2022/02/05/0/0/841/533/1280/0/60/0/1a04880_1644022456699-baby-yoda-mandalorian.jpg"
     ]
   },
   {
@@ -136,7 +136,7 @@ export const products = [
     images: [
       "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSxFpnLUHVeyvo3K37XO4kzpWw8lKHUnjM7E76_KAesHIofHmSiBTB7z1S_aGhuGgN5vMISimYUoPs2gbBsGgDKmBUtLsmbos97sQRFHiLGTzTS8XjpAXLvRbavNilESSI0Xy3o6Q&usqp=CAc",
       "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSxFpnLUHVeyvo3K37XO4kzpWw8lKHUnjM7E76_KAesHIofHmSiBTB7z1S_aGhuGgN5vMISimYUoPs2gbBsGgDKmBUtLsmbos97sQRFHiLGTzTS8XjpAXLvRbavNilESSI0Xy3o6Q&usqp=CAc",
-      "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSxFpnLUHVeyvo3K37XO4kzpWw8lKHUnjM7E76_KAesHIofHmSiBTB7z1S_aGhuGgN5vMISimYUoPs2gbBsGgDKmBUtLsmbos97sQRFHiLGTzTS8XjpAXLvRbavNilESSI0Xy3o6Q&usqp=CAc"
+      "https://focus.courrierinternational.com/2022/02/05/0/0/841/533/1280/0/60/0/1a04880_1644022456699-baby-yoda-mandalorian.jpg"
     ]
   }
 ];

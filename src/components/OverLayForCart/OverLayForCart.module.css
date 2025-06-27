@@ -3,19 +3,24 @@
   top: 78px; 
   right: 0;
   width: 325px;
-  height: calc(100vh - 78px); 
   background: white;
   overflow-y: auto;
   padding: 20px;
   pointer-events: all;
   box-sizing: border-box;
   margin-right: 78px; 
+      height: auto;
+    max-height: 450px;
+    
 }
+
 
 .modal {
   display: flex;
   flex-direction: column;
   height: 100%;
+  max-height: 450px;
+  position: relative;
 }
 
 .header {
@@ -25,33 +30,29 @@
 }
 
 .items {
-  flex: 1 1 auto;
+  flex: 1;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 100%;
 }
+
 
 .total {
   font-weight: 600;
   font-size: 1rem;
   margin: 12px 0 0 0;
   text-align: right;
+  font-family: "raleway", sans-serif;
 }
 
 .actions {
   display: flex;
   gap: 10px;
-  margin-left: 0;
-  margin-top: 8px;
   justify-content: flex-end;
-  position: sticky;
-  bottom: 0;
-  background: white;
-  padding-bottom: 12px;
-  z-index: 2;
+  margin-top: 25px;
 }
+
 
 .actions button {
   width: 140px;
@@ -61,16 +62,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Raleway", sans-serif;
 }
 
 .actions button:first-child {
   background: white;
-  border: 1px solid #1dbc5e;
-  color: #1dbc5e;
+  border: 1px solid black;
+  color: black;
 }
 
 .actions button:last-child {
-  background: #1dbc5e;
+  background: #5ECE7B;
   color: white;
   border: none;
 }
@@ -82,11 +84,7 @@ a {
 .footer {
   position: sticky;
   bottom: 0;
-  background: white;
   padding-top: 8px;
   padding-bottom: 16px;
   z-index: 2;
-  /* Optional: add a subtle shadow for separation */
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
 }
-

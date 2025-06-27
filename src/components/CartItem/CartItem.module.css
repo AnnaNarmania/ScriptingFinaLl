@@ -25,15 +25,18 @@
 }
 
 .name {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.1rem;
   margin: 0 0 3px;
+  font-family: "raleway", sans-serif;
+  
 }
 
 .price {
   font-weight: bold;
-  margin: 3px 0;
+  margin: 10px 0;
   font-size: 1rem;
+  font-family: "raleway", sans-serif;
 }
 
 .label {
@@ -51,7 +54,7 @@ line-height: 18px;
   display: flex;
   flex-direction: column;
   align-items:  center;
-    gap: 16px;
+    gap: 45px;
   
   
 }
@@ -92,11 +95,11 @@ line-height: 18px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 18px;
+  gap: 10px;
 }
 
 .photoBlockWide {
-  gap: 48px;
+  gap: 10px;
 }
 
 .sizeSelector {

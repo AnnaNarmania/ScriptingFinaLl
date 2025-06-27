@@ -110,3 +110,8 @@ option {
 .product:hover .photo img {
   transform: scale(1.1);
 }
+
+.icon{
+  margin-left: -2px;
+}
+

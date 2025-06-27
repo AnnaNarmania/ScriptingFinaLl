@@ -1,10 +1,12 @@
 .shippingmethodcontainer {
-  display: flex;
-  max-width: 1200px;
-  padding: 40px 20px;
-  font-family: 'Segoe UI', sans-serif;
-  margin-left: 10%;
-  height: 600px;
+   display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    min-height: 600px;
+    box-sizing: border-box;
 }
 
 /* LEFT SIDE */
@@ -27,6 +29,8 @@
   border: 1px solid #ddd;
   font-size: 1rem;
   color: gray;
+  border-radius: 7px;
+  font-family: Helvetica, sans-serif;
 }
 .progresssteps {
   display: flex;
@@ -35,15 +39,16 @@
   margin-bottom: 20px;
 }
 .progressstepsprevious {
-  color: #28a745;
+  color: #56B280 !important;
 }
-.progressstep {
+.progressstepNext {
   color: #555;
 }
 .current-step {
   font-weight: 600;
   color: #000;
 }
+
 
 .contact-box {
   width: 95%;
@@ -65,6 +70,7 @@
   margin-bottom: 1.5rem;
   border: 1px solid #ddd;
   font-size: 1rem;
+  border-radius: 7px;
 }
 .shippingoption input[type="radio"] {
   margin-right: 12px;
@@ -92,21 +98,21 @@
 }
 .buttongroup button:first-child {
   background: transparent;
-  color: #28a745;
+  color: #56B280;
   text-decoration: underline;
 }
 .buttongroup button:last-child {
-  background: #28a745;
+  background:#56B280;
   color: #fff;
   font-weight: 600;
 }
 
 /* RIGHT SIDE */
 .rigthside {
-  margin-left: 10%;
   flex: 1;
   background: #f5f5f5;
-  padding: 30px 20px
+  padding: 30px 20px;
+  font-family: "raleway", sans-serif;
 }
 .orderitem {
   display: flex;
@@ -126,7 +132,7 @@
   margin-bottom: 4px;
 }
 .itemprice {
-  color: #28a745;
+  color: #56B280;
   font-weight: 600;
   font-size: 15px;
 }
@@ -154,4 +160,22 @@
 }
 .shippingmethod{
   margin-left: 285px;
+}
+
+.scroll {
+  max-height: 180px;
+  overflow-y: auto;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.shippingsum{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #555;
+  margin: 8px 0;
+  text-align: end;
 }

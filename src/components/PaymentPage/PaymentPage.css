@@ -1,4 +1,4 @@
-/* PaymentPage.css - scoped only to PaymentPage */
+
 
 .payment-page-container {
   display: grid;
@@ -7,7 +7,7 @@
     max-width: 1200px;
     margin: 0 auto;
     background-color: #fff;
-    min-height: 100vh;
+    min-height: 600px;
     box-sizing: border-box;
 }
 
@@ -17,65 +17,88 @@
 }
 
 .checkout-right {
-    background-color: #e8e8e8;
-    padding: 3rem;
-    border-radius: 8px;
-    height: 900px;
-    box-sizing: border-box;
-    position: absolute;
-    margin-left: 600px;
-    margin-top: -12px;
-    width: 750px;
+ 
+    flex: 1;
+  background: #f5f5f5;
+  padding: 30px 20px
 }
 
-.progress-steps {
-  font-size: 0.9rem;
-  color: #6b7280;
-  margin-bottom: 2rem;
+.progresssteps {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-family: "roboto", sans-serif;
 }
-
+.progressstepsprevious {
+  color: #56B280 !important;
+}
+.progressstep {
+  color: #56B280 !important;
+}
 .current-step {
-  font-weight: bold;
+  font-weight: 600;
   color: #000;
 }
 
-.payment-summary-header {
-  border: 1px solid #e5e7eb;
-  border-radius: 6px;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  background-color: #fefefe;
-  font-size: 0.9rem;
-  line-height: 1.5;
+.paymentSumm {
+  flex: 1;
+  background: #fff;
+  padding-right: 40px;
+  padding: 16px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #DDF0E6;
+  font-size: 1rem;
+  color: gray;
+  border-radius: 7px;
+  font-family: Helvetica, sans-serif;
+  color: #272727;
+  font-size: 14px;
 }
-
+.divider{
+  background-color: #DDF0E6;
+  color: #DDF0E6;;
+  height: 1px;
+  border: none;
+}
+strong{
+  color: #818181;
+  margin-right: 8px;
+}
 h3 {
-  font-size: 1.1rem;
+  font-size: 20px;
   margin-bottom: 1rem;
   color: #111827;
+  font-family: "roboto", sans-serif;
 }
 
 .payment-form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 24px;
 }
 
 .card-box {
-  border: 1px solid #cbd5e1;
+  border: 1px solid #E5E5E5;
   border-radius: 6px;
   overflow: hidden;
 }
 
+.card-box input{
+  border-radius: 0px !important;
+}
+
 .card-header {
   background: #d1fae5;
-  color: #065f46;
-  padding: 0.75rem 1rem;
+  color: #56B280;
+  padding: 16px;
   font-weight: bold;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.95rem;
+  gap: 23px;
+  font-family: "roboto", sans-serif;
+  font-size: 16px;
+  margin-left: -50px
 }
 
 .card-header::before {
@@ -117,22 +140,31 @@ h3 {
   gap: 1rem;
 }
 
-.payment-buttons {
+.buttons {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
 }
 
-button.primary {
-  background-color: #22c55e;
+.pay {
+  background-color: #56B280;
   color: white;
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 4px;
   font-weight: 600;
   cursor: pointer;
+  font-size: 20px;
 }
-
+.back{
+  background: none;
+  color: #56B280;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  font-size: 18px;
+}
 button.primary:hover {
   background-color: #16a34a;
 }
@@ -188,4 +220,29 @@ button.link {
 /* Scoped only to .payment-page-container to prevent global override */
 .payment-page-container * {
   box-sizing: border-box;
+}
+.scroll {
+  max-height: 180px;
+  overflow-y: auto;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+svg{
+  margin-left: 8px
+}
+
+.row{
+  display: flex;
+  gap: 14px
+}
+
+.row input{
+  width: 260px;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 0.9rem;
 }

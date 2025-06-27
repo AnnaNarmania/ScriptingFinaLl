@@ -23,8 +23,9 @@ const ShippingMethodPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    navigate('/payment');
+    if (total === 0) return alert("Your cart is empty. Please add items to your cart before proceeding to checkout.");
+    else
+        navigate('/payment');
   };
 
   const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
@@ -39,12 +40,12 @@ const ShippingMethodPage = () => {
   <p className="progressstepsprevious">Cart </p> 
   <p className="progressstepsprevious"> &gt;   Details </p> 
   <p className="progressstep"> &gt;   <span className="current-step">Shipping</span> </p>
-  <p className="progressstep"> &gt;   Payment </p>
+  <p className="progressstepNext"> &gt;   Payment </p>
 </div>
         <div className="shippingmethodform1">
-          <div>contact {contact}</div>   
+          <div>Contact {contact}</div>   
                     <div className="divider"></div> 
-          <div> ship to {`${address}, ${postalCode}, ${city} ${province}, ${country}`}</div>
+          <div> Ship to {`${address}, ${postalCode}, ${city} ${province}, ${country}`}</div>
           </div>
           
           <h3>Shipping method</h3>
@@ -83,25 +84,27 @@ const ShippingMethodPage = () => {
      
           
           <div className="rigthside">
-          {cartItems.map(item => (
-            <div key={item.id} className="orderitem">
-              <img 
-                src={item.images[0]} 
-                alt={item.name} 
-                className="productimage"
-              />
-              <div className="itemdetails">
-                <p className="itemname">{item.name}</p>
-                <p className="itemprice">${item.price.toFixed(2)}</p>
-              </div>
-            </div>
-          ))}          
+           <div className="scroll">
+    {cartItems.map(item => (
+      <div key={item.id} className="order-item">
+        <img 
+          src={item.images[0]} 
+          alt={item.name} 
+          className="productimage"
+        />
+        <div className="itemdetails">
+          <p className="itemname">{item.name}</p>
+          <p className="itemprice">${item.price.toFixed(2)}</p>
+        </div>
+      </div>
+    ))}
+  </div>        
                     <div className="divider"></div>
           <div className="summaryrow">
             <span>Subtotal</span>
             <span>${subtotal.toFixed(2)}</span>
           </div>
-          <div className="summarrow">
+          <div className="shippingsum">
             <span>Shipping</span>
             <span className='shippingmethod'>{shippingCost === 0 ? 'Free Shipping' : `$${shippingCost.toFixed(2)}`}</span>
           </div>

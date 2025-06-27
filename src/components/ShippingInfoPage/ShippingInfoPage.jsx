@@ -69,8 +69,10 @@ const validateData = (data) => {
 
     const error  = validateData(formData)
     if (error) setErroMessage(error)
+    else if (total === 0) setErroMessage("Your cart is empty. Please add items to your cart before proceeding to checkout.");
     else
         navigate('/shipping-method');
+    
   };
 
   const handleChange = (e) => {
@@ -83,14 +85,15 @@ const validateData = (data) => {
   const total = subtotal;
 
   return (
+    
     <div className="shippingcontainer">
         
         <div className='shippingform'>
             <div className="progresssteps">
 <div className="progresssteps">
   <p className="progressstepsprevious">Cart </p> 
-  <p className="progressstep"> &gt;   Details </p> 
-  <p className="progressstep"> &gt;   <span className="current-step">Shipping</span> </p>
+  <p className="progressstep"> &gt;   <span className="current-step">Details </span> </p> 
+  <p className="progressstep"> &gt; Shipping</p>
   <p className="progressstep"> &gt;   Payment </p>
 </div>
 </div>
@@ -105,9 +108,7 @@ const validateData = (data) => {
             required
             className="contactinputfield"
           />
-          
-          <div className="divider"></div>
-
+        
           <h2 className="sectiontitle">Shipping Address</h2>
           <div className="namefields">
             <input
@@ -187,7 +188,7 @@ const validateData = (data) => {
     value={formData.country}
     onChange={handleChange}
     required
-    className="styled-select"
+    className="styledselect"
   >
     <option value="">Select a country</option>
     <option value="Italy">Italy</option>
@@ -238,19 +239,21 @@ const validateData = (data) => {
         </div>
 
         <div className="ordersummary">
-          {cartItems.map(item => (
-            <div key={item.id} className="order-item">
-              <img 
-                src={item.images[0]} 
-                alt={item.name} 
-                className="productimage"
-              />
-              <div className="itemdetails">
-                <p className="itemname">{item.name}</p>
-                <p className="itemprice">${item.price.toFixed(2)}</p>
-              </div>
-            </div>
-          ))}
+           <div className="scroll">
+    {cartItems.map(item => (
+      <div key={item.id} className="order-item">
+        <img 
+          src={item.images[0]} 
+          alt={item.name} 
+          className="productimage"
+        />
+        <div className="itemdetails">
+          <p className="itemname">{item.name}</p>
+          <p className="itemprice">${item.price.toFixed(2)}</p>
+        </div>
+      </div>
+    ))}
+  </div>
           
           <div className="divider"></div>
 

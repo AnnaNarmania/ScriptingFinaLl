@@ -3,13 +3,14 @@ import { useCurrency } from "./contexts/CurrencyContext";
 import { useNavigate } from "react-router-dom";
 import "./NavBar.css";
 
+//This function renders categories, logos, currency's and car icon with the count of items from the cart
 function Navigation({ activeCategory, setActiveCategory, onCartClick }) {
-  const { cartItems } = useCart();
-  const { currency, setCurrency } = useCurrency();
+  const { cartItems } = useCart(); //we import cart items from the file called cartcontext
+  const { currency, setCurrency } = useCurrency(); //we import currency and setCurrency from the file called currencycontext, we update currency using  setCurrency
   const navigate = useNavigate();
 
   const categories = ["WOMEN", "MEN", "KIDS"];
-  let cartCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+  let cartCount = cartItems.reduce((acc, item) => acc + item.quantity, 0); //we calculate total number of items in the cart
 
   return (
     <nav className="navigation">
@@ -17,7 +18,7 @@ function Navigation({ activeCategory, setActiveCategory, onCartClick }) {
         {categories.map((category) => {
           let className = "cat";
           if (activeCategory === category) {
-            className += " active";
+            className += " active"; // If the category is active, add the 'active' class
           }
 
           return (
@@ -26,7 +27,7 @@ function Navigation({ activeCategory, setActiveCategory, onCartClick }) {
               className={className}
               onClick={() => {
                 setActiveCategory(category);
-                navigate("/");
+                navigate("/"); // Navigate to the home page when a category is clicked
               }}
             >
               {category}
@@ -82,7 +83,7 @@ function Navigation({ activeCategory, setActiveCategory, onCartClick }) {
       </div>
 
       <div className="cartCurr">
-        <select
+        <select // Dropdown for currency selection
           value={currency}
           onChange={(e) => setCurrency(e.target.value)}
           className="dropdown"
@@ -114,7 +115,9 @@ function Navigation({ activeCategory, setActiveCategory, onCartClick }) {
               fill="#43464E"
             />
           </svg>
-          {cartCount > 0 && <span className="count">{cartCount}</span>}
+          
+          {cartCount > 0 && <span className="count">{cartCount}</span>} 
+          {/* Display the count of items in the cart */}
         </div>
       </div>
     </nav>

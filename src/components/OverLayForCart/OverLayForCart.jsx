@@ -32,8 +32,9 @@ function OverLayForCart({ onClose }) {
   };
 
   return (
+    // Using OutsideClickHandler to close the overlay when clicking outside
+    <OutsideClickHandler onOutsideClick={onClose}>
     <div className={styles.overlay}>
-       <OutsideClickHandler onOutsideClick={onClose}>
       <div className={styles.modal}>
         <h2 className={styles.header}>My Bag, {cartItems.length} items</h2>
         <div className={styles.items}>
@@ -45,13 +46,12 @@ function OverLayForCart({ onClose }) {
         <p className={styles.total}>Total: {getPrice(total)}</p>
         <div className={styles.actions}>
           <button onClick={handleViewBag}>VIEW BAG</button>
-         
           <button onClick={handleCheckout}>CHECKOUT</button>
           </div>
         </div>
       </div>
-      </OutsideClickHandler>
     </div>
+    </OutsideClickHandler>
   );
 }
 

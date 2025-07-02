@@ -25,18 +25,15 @@
 }
 
 .name {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.1rem;
   margin: 0 0 3px;
-  font-family: "raleway", sans-serif;
-  
 }
 
 .price {
   font-weight: bold;
-  margin: 10px 0;
+  margin: 3px 0;
   font-size: 1rem;
-  font-family: "raleway", sans-serif;
 }
 
 .label {
@@ -54,7 +51,7 @@ line-height: 18px;
   display: flex;
   flex-direction: column;
   align-items:  center;
-    gap: 45px;
+    gap: 16px;
   
   
 }
@@ -93,16 +90,103 @@ line-height: 18px;
 
 .photoBlock {
   display: flex;
+  width: 80%;
   flex-direction: row;
   align-items: center;
-  gap: 10px;
+  gap: 18px;
 }
 
 .photoBlockWide {
-  gap: 10px;
+  gap: 48px;
 }
 
 .sizeSelector {
   font-size: 0.8rem;
+}
+
+
+.cartItemMini {
+  padding: 6px 0;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.rowMini {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+  flex-wrap: nowrap;
+}
+
+.photoBlockMini {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.imageMini {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.nameMini {
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+.priceMini {
+  font-size: 0.95rem;
+  margin: 2px 0;
+}
+
+.labelMini {
+  font-size: 0.75rem;
+  margin-bottom: 2px;
+}
+
+.quantityControlMini {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.qtyButtonMini {
+  width: 24px;
+  height: 24px;
+  font-size: 1rem;
+  border: 1px solid #000;
+  background: #fff;
+  cursor: pointer;
+  padding: 0;
+}
+
+.qtyValueMini {
+  font-size: 0.95rem;
+  font-weight: bold;
+  min-width: 18px;
+  text-align: center;
+}
+
+.sizeSelectorMini {
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.sizeButtonMini {
+  min-width: 32px;
+  max-width: 40px;
+  padding: 0 4px;
+  font-size: 0.85rem;
+  box-sizing: border-box;
 }
 

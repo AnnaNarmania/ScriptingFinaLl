@@ -3,14 +3,13 @@ import { useCurrency } from "./contexts/CurrencyContext";
 import { useNavigate } from "react-router-dom";
 import "./NavBar.css";
 
-//This function renders categories, logos, currency's and car icon with the count of items from the cart
 function Navigation({ activeCategory, setActiveCategory, onCartClick }) {
-  const { cartItems } = useCart(); //we import cart items from the file called cartcontext
-  const { currency, setCurrency } = useCurrency(); //we import currency and setCurrency from the file called currencycontext, we update currency using  setCurrency
+  const { cartItems } = useCart();
+  const { currency, setCurrency } = useCurrency();
   const navigate = useNavigate();
 
   const categories = ["WOMEN", "MEN", "KIDS"];
-  let cartCount = cartItems.reduce((acc, item) => acc + item.quantity, 0); //we calculate total number of items in the cart
+  let cartCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
     <nav className="navigation">
@@ -18,7 +17,7 @@ function Navigation({ activeCategory, setActiveCategory, onCartClick }) {
         {categories.map((category) => {
           let className = "cat";
           if (activeCategory === category) {
-            className += " active"; // If the category is active, add the 'active' class
+            className += " active";
           }
 
           return (
@@ -27,7 +26,7 @@ function Navigation({ activeCategory, setActiveCategory, onCartClick }) {
               className={className}
               onClick={() => {
                 setActiveCategory(category);
-                navigate("/"); // Navigate to the home page when a category is clicked
+                navigate("/");
               }}
             >
               {category}
@@ -73,17 +72,25 @@ function Navigation({ activeCategory, setActiveCategory, onCartClick }) {
               gradientUnits="userSpaceOnUse"
             >
               <stop stopColor="#52D67A" />
-              <stop offset="1" stopColor="#5AEE87" />
+              <stop
+                offset="1"
+                stopColor="#5AEE87"
+              />
             </linearGradient>
             <clipPath id="clip0">
-              <rect width="31.16" height="30.176" fill="white" transform="translate(0.920044 0.412109)" />
+              <rect
+                width="31.16"
+                height="30.176"
+                fill="white"
+                transform="translate(0.920044 0.412109)"
+              />
             </clipPath>
           </defs>
         </svg>
       </div>
 
       <div className="cartCurr">
-        <select // Dropdown for currency selection
+        <select
           value={currency}
           onChange={(e) => setCurrency(e.target.value)}
           className="dropdown"
@@ -93,7 +100,10 @@ function Navigation({ activeCategory, setActiveCategory, onCartClick }) {
           <option value="JPY">¥ JPY</option>
         </select>
 
-        <div className="icon" onClick={onCartClick}>
+        <div
+          className="icon"
+          onClick={onCartClick}
+        >
           <svg
             className="cart"
             xmlns="http://www.w3.org/2000/svg"
@@ -115,9 +125,8 @@ function Navigation({ activeCategory, setActiveCategory, onCartClick }) {
               fill="#43464E"
             />
           </svg>
-          
-          {cartCount > 0 && <span className="count">{cartCount}</span>} 
-          {/* Display the count of items in the cart */}
+
+          {cartCount > 0 && <span className="count">{cartCount}</span>}
         </div>
       </div>
     </nav>

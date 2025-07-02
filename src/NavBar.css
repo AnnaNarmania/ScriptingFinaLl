@@ -21,7 +21,7 @@
   font-family: "Raleway", sans-serif;
 }
 
-/*used to style the active category in the navigation bar, so it is highligted */
+
 .cat.active {
   border-bottom: 3px solid #5ece7b;
   color: #5ece7b;
@@ -32,7 +32,7 @@
 .logo {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%); /* Centers the logo, since we are using space-between, logo is not centered on its own*/
+  transform: translateX(-50%); 
 }
 .cartCurr {
   display: flex;

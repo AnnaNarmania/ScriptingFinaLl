@@ -14,24 +14,23 @@ import PaymentPage from "./components/PaymentPage/PaymentPage";
 import ConfirmationPage from "./components/ConfirmationPage/ConfirmationPage";
 
 
-function AppContent() {
+function Pages() {
   const [activeCategory, setActiveCategory] = useState("WOMEN");
   const [showOverlay, setShowOverlay] = useState(false);
   const location = useLocation();
 
 
-  //arra so we know on which pages navbar should not be seen
+  
   const hideNavPaths = [
     '/shippinginfopage',
     '/shipping-method',
     '/payment',
     '/confirmation'
   ];
-  const shouldHideNav = hideNavPaths.includes(location.pathname);  //we check if the page we are on is one of the pages in the array
+  const shouldHideNav = hideNavPaths.includes(location.pathname);  
 
   return (
     <>
-      {/*if we are not on that pages, navigation will be seem*/}
       {!shouldHideNav && ( 
         <Navigation
           activeCategory={activeCategory}
@@ -64,7 +63,7 @@ function App() {
       <CartProvider>
         <FormProvider>
           <Router>
-            <AppContent />
+            <Pages />
           </Router>
         </FormProvider>
       </CartProvider>

@@ -154,14 +154,13 @@ const currencySymbols = {
 };
 
 function Products({ activeCategory }) {
-  const { addToCart } = useCart(); //we import addToCart from the file called cartcontext, we use it to add products to the cart
-  const { currency } = useCurrency(); //we import currency from the file called currencycontext, we use it to calculate the price based on the currency
+  const { addToCart } = useCart(); 
+  const { currency } = useCurrency(); 
+
+  const visible = products.filter((p) => p.category === activeCategory); 
 
 
-  const visible = products.filter((p) => p.category === activeCategory); //we filter products by category so when category is selected, its products are shown and not other categorys products
-
-
-  //to calculate the price based on the currency
+  
   const getPrice = (price) => {
     const rate = currencyRates[currency];
     const symbol = currencySymbols[currency];
@@ -185,7 +184,7 @@ function Products({ activeCategory }) {
                   className={!product.inStock ? "grayscale" : ""}
                 />
                 {!product.inStock && (
-                  <div className="out-of-stock">OUT OF STOCK</div> // Display "OUT OF STOCK" if the product is not in stock and disable the adding to cart 
+                  <div className="out-of-stock">OUT OF STOCK</div> 
                 )}
               </div>
               <div className="details">
@@ -197,7 +196,7 @@ function Products({ activeCategory }) {
             {product.inStock && (
               <button
                 className="add-to-cart"
-                onClick={() => addToCart(product)} //if it is in stock, you can add it to cart
+                onClick={() => addToCart(product)} 
               >
                     <svg className="icon"
                       xmlns="http://www.w3.org/2000/svg"
